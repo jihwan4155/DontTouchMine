@@ -1,0 +1,36 @@
+name: 📝 이슈
+description: 버그, 기능 제안, 작업 등 모든 이슈를 등록합니다.
+title: "[파트] 태그(대문자) : 제목"
+labels: ["needs-triage"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 이슈 유형
+      options:
+        - 🐞 버그
+        - ✨ 기능 / 콘텐츠
+        - ⚡ 개선 (성능, UX, 리팩터링 등)
+        - 🛠️ 작업 (툴, 빌드, 문서 등)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - "P0 - 긴급 (크래시, 진행 불가, 데이터 손실)"
+        - "P1 - 높음"
+        - "P2 - 보통"
+        - "P3 - 낮음"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 설명
+      description: 무엇을 작업할 것인지, 또는 무엇을 왜 해야 하는지 적어 주세요.
+    validations:
+      required: true
